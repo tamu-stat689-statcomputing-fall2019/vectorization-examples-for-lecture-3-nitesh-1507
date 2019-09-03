@@ -2,7 +2,14 @@
 
 square_for <- function(x){
   # [ToDo] Use the for loop
+  square = rep(0,length(x))
+  for(i in 1:length(x))
+  {
+    square[i] = x[i] * x[i]
+  }
   
+  # returning the vector after squaring
+  return(square)
 }
 
 square_sapply <- function(x){
