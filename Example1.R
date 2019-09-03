@@ -22,7 +22,10 @@ square_sapply <- function(x){
 
 square_vec <- function(x){
   # [ToDo] Use power(^) function in vector form
+  square = x^2
   
+  # returning the vector after squaring
+  return(square)
 }
 
 square_vec2 <- function(x){
