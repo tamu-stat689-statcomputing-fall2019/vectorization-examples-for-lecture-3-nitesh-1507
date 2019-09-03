@@ -30,7 +30,10 @@ square_vec <- function(x){
 
 square_vec2 <- function(x){
   # [ToDo] Use multiplication(*) function in vector form
-
+  square = x * x
+  
+  # returning the vector after squaring
+  return(square)
 }
 
 # [ToDo] Create a vector x of size 100,000 of normal variables
