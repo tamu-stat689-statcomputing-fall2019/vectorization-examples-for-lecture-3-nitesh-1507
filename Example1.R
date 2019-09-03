@@ -14,7 +14,10 @@ square_for <- function(x){
 
 square_sapply <- function(x){
   # [ToDo] Use the sapply function
+  square = sapply(x, function(y) y^2)
   
+  # returning the vector after squaring
+  return(square)
 }
 
 square_vec <- function(x){
