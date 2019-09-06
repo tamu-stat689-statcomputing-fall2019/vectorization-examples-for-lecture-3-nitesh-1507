@@ -21,6 +21,17 @@ classify_for <- function(beta, xtrain, ytrain, xtest, ytest){
   
   # Calculate class assignments for xtest in a for loop
   
+  y_pred = rep(1, nrow(xtest))
+  for(i in 1:nrow(xtest))
+  {
+    distance_1 = ((xtest[i,] %*% beta) - (mean_1 %*% beta))^2
+    distance_2 = ((xtest[i,] %*% beta) - (mean_2 %*% beta))^2
+    
+    if(distance_2<distance_1)
+    {
+      y_pred[i] = 2
+    }
+  }
   
   # Calculate % error using ytest
   
