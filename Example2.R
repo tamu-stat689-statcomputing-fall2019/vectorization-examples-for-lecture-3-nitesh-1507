@@ -38,7 +38,7 @@ classify_for <- function(beta, xtrain, ytrain, xtest, ytest){
   error = sum(y_pred != ytest)/length(y_pred)
 
   # Return predictions and error
-  return(list(ypred = ypred, error = error))
+  return(list(ypred = y_pred, error = error))
   
 }
 
@@ -70,7 +70,7 @@ classify_vec <- function(beta, xtrain, ytrain, xtest, ytest){
   error = sum(y_pred != ytest)/length(y_pred)
  
   # Return predictions and error
-  return(list(ypred = ypred, error = error))
+  return(list(ypred = y_pred, error = error))
 }
 
 # Example 
@@ -114,6 +114,12 @@ out1 = classify_for(beta, xtrain, ytrain, xtest, ytest)
 out2 = classify_vec(beta, xtrain, ytrain, xtest, ytest)
 
 # [ToDo] Verify the assignments agree with each other
+
+identical(
+  
+  classify_for(beta, xtrain, ytrain, xtest, ytest),
+  classify_vec(beta, xtrain, ytrain, xtest, ytest)
+)
 
 # [ToDo] Use microbenchmark package to compare the timing
 
