@@ -50,8 +50,15 @@ classify_vec <- function(beta, xtrain, ytrain, xtest, ytest){
   mean_2 = colMeans(xtrain[ytrain == 2,])
   
   # Calculate class assignments for xtest using matrix and vector algebra
+  # Calculate dot product of mean for each class with beta.
+  m1b = c(mean_1 %*% beta)
+  m2b = c(mean_2 %*% beta)
+  
+  # Calculate dot product of xtest with beta
+  xtestb = xtest %*% beta
   
   # Calculate % error using ytest
+  
  
   # Return predictions and error
   return(list(ypred = ypred, error = error))
