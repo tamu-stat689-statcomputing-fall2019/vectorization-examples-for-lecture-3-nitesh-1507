@@ -124,3 +124,10 @@ identical(
 # [ToDo] Use microbenchmark package to compare the timing
 
 library(microbenchmark)
+
+microbenchmark(
+  
+  classify_for(beta, xtrain, ytrain, xtest, ytest),
+  classify_vec(beta, xtrain, ytrain, xtest, ytest)
+  
+)
