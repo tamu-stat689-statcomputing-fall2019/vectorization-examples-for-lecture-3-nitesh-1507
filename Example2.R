@@ -16,14 +16,19 @@ classify_for <- function(beta, xtrain, ytrain, xtest, ytest){
   # [ToDo] Code discriminant analysis classifier using for loop
   
   # Calculate sample means based on training data
- 
+  mean_1 = colMeans(xtrain[ytrain == 1,])
+  mean_2 = colMeans(xtrain[ytrain == 2,])
   
   # Calculate class assignments for xtest in a for loop
   
+  
   # Calculate % error using ytest
+  
+  
 
   # Return predictions and error
   return(list(ypred = ypred, error = error))
+  
 }
 
 classify_vec <- function(beta, xtrain, ytrain, xtest, ytest){
