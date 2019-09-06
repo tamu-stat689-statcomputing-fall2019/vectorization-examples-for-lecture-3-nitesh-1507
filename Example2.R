@@ -46,6 +46,8 @@ classify_vec <- function(beta, xtrain, ytrain, xtest, ytest){
   # [ToDo] Try to create vectorized version of classify_for
   
   # Calculate sample means based on training data
+  mean_1 = colMeans(xtrain[ytrain == 1,])
+  mean_2 = colMeans(xtrain[ytrain == 2,])
   
   # Calculate class assignments for xtest using matrix and vector algebra
   
