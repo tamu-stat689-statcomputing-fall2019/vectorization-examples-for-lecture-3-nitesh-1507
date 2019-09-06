@@ -57,6 +57,14 @@ classify_vec <- function(beta, xtrain, ytrain, xtest, ytest){
   # Calculate dot product of xtest with beta
   xtestb = xtest %*% beta
   
+  # Calculate distance of each test point from the cluster centre
+  distance_1 = (xtestb - m1b)^2
+  distance_2 = (xtestb - m2b)^2
+  
+  # Class prediction for each test point
+  y_pred = rep(1, nrow(xtest))
+  y_pred[distance_2<distance_1] = 2
+  
   # Calculate % error using ytest
   
  
