@@ -35,7 +35,7 @@ classify_for <- function(beta, xtrain, ytrain, xtest, ytest){
   
   # Calculate % error using ytest
   
-  
+  error = sum(y_pred != ytest)/length(y_pred)
 
   # Return predictions and error
   return(list(ypred = ypred, error = error))
